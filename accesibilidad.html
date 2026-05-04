@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Declaración formal de accesibilidad del sitio web Visita Ronda. Conformidad con WCAG 2.2 nivel AA.">
+  <title>Declaración de accesibilidad · Visita Ronda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="img/iconos/favicon.svg">
+</head>
+<body>
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="cabecera" role="banner">
+    <div class="cabecera-contenido contenedor">
+      <a href="index.html" class="logo" aria-label="Visita Ronda - Inicio">
+        <svg class="logo-icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect x="4" y="20" width="40" height="24" fill="#A0451B"/>
+          <path d="M4 28 L24 12 L44 28 Z" fill="#1E3A5F"/>
+          <rect x="20" y="32" width="8" height="12" fill="#F5EFE6"/>
+          <circle cx="14" cy="24" r="2" fill="#F5EFE6"/>
+          <circle cx="34" cy="24" r="2" fill="#F5EFE6"/>
+        </svg>
+        <span>
+          <span class="logo-texto">Visita Ronda</span>
+          <span class="logo-subtexto">Andalucía · España</span>
+        </span>
+      </a>
+      <button class="boton-menu" aria-expanded="false" aria-controls="nav-principal" type="button">☰ Menú</button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="postal.html">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html" aria-current="page">Accesibilidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <div class="contenedor">
+
+      <h1>Declaración de accesibilidad</h1>
+
+      <section aria-labelledby="titulo-compromiso">
+        <h2 id="titulo-compromiso">Nuestro compromiso</h2>
+        <p>
+          Este sitio web ha sido diseñado conforme a las
+          <strong>Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2</strong>
+          publicadas por el <abbr title="World Wide Web Consortium">W3C</abbr>,
+          alcanzando el nivel de conformidad <strong>AA</strong> (Doble-A).
+        </p>
+        <p>
+          Nuestro objetivo es garantizar que cualquier persona, independientemente de sus
+          capacidades, pueda acceder a la información sobre Ronda y sus atractivos turísticos.
+        </p>
+        <p>
+          <img src="img/iconos/wcag-aa.svg"
+               alt="Logo de conformidad WCAG 2.2 nivel AA"
+               style="max-width:200px;">
+        </p>
+      </section>
+
+      <section aria-labelledby="titulo-info-obligatoria">
+        <h2 id="titulo-info-obligatoria">Información obligatoria de la declaración</h2>
+
+        <table>
+          <caption>Datos formales de la declaración de conformidad</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Fecha de la declaración</th>
+              <td>4 de mayo de 2026</td>
+            </tr>
+            <tr>
+              <th scope="row">Pautas seguidas</th>
+              <td>
+                Web Content Accessibility Guidelines (WCAG) 2.2<br>
+                <a href="https://www.w3.org/TR/WCAG22/" rel="noopener">https://www.w3.org/TR/WCAG22/</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Nivel de conformidad</th>
+              <td><strong>AA</strong> (Doble-A)</td>
+            </tr>
+            <tr>
+              <th scope="row">Ámbito (páginas)</th>
+              <td>
+                Todas las páginas del sitio: inicio, galería, postal, contacto y esta
+                declaración.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Tecnologías dependientes</th>
+              <td>HTML5, CSS3 y JavaScript (ECMAScript 2020)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="titulo-medidas">
+        <h2 id="titulo-medidas">Medidas de accesibilidad aplicadas</h2>
+        <p>Para alcanzar el nivel AA hemos aplicado, entre otras, estas medidas:</p>
+        <ul class="lista-iconos">
+          <li><strong>Perceptible:</strong> alternativas textuales en imágenes, transcripciones de audio y vídeo, subtítulos, contraste de color superior a 4,5:1 en texto y 3:1 en interfaz.</li>
+          <li><strong>Operable:</strong> navegación completa por teclado, enlace de salto al contenido, foco siempre visible, áreas táctiles mínimas de 44 × 44 píxeles (WCAG 2.5.8).</li>
+          <li><strong>Comprensible:</strong> idioma declarado en cada página, estructura semántica con encabezados jerárquicos, formularios con etiquetas explícitas, mensajes de error claros y sugerencias de corrección.</li>
+          <li><strong>Robusto:</strong> código HTML5 válido, uso de atributos <code>ARIA</code> donde la semántica nativa no es suficiente, mensajes de estado anunciados a productos de apoyo.</li>
+          <li><strong>Respeto a las preferencias del usuario:</strong> soporte para <code>prefers-reduced-motion</code> y <code>prefers-contrast</code>.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="titulo-validacion">
+        <h2 id="titulo-validacion">Validación realizada</h2>
+        <p>
+          La accesibilidad del sitio se ha verificado con las siguientes herramientas
+          (al menos cinco validadores online, más uno textual, según el enunciado de la práctica):
+        </p>
+        <table>
+          <caption>Herramientas de validación utilizadas</caption>
+          <thead>
+            <tr>
+              <th scope="col">Herramienta</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Enlace</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WAVE (WebAIM)</td>
+              <td>Online visual</td>
+              <td><a href="https://wave.webaim.org/" rel="noopener">wave.webaim.org</a></td>
+            </tr>
+            <tr>
+              <td>axe DevTools</td>
+              <td>Extensión navegador</td>
+              <td><a href="https://www.deque.com/axe/" rel="noopener">deque.com/axe</a></td>
+            </tr>
+            <tr>
+              <td>Lighthouse</td>
+              <td>Chrome DevTools</td>
+              <td><a href="https://developer.chrome.com/docs/lighthouse" rel="noopener">developer.chrome.com</a></td>
+            </tr>
+            <tr>
+              <td>Accessibility Checker</td>
+              <td>Online visual</td>
+              <td><a href="https://www.accessibilitychecker.org/" rel="noopener">accessibilitychecker.org</a></td>
+            </tr>
+            <tr>
+              <td>SiteImprove Accessibility Checker</td>
+              <td>Extensión navegador</td>
+              <td><a href="https://www.siteimprove.com/" rel="noopener">siteimprove.com</a></td>
+            </tr>
+            <tr>
+              <td>Tota11y</td>
+              <td>Validador textual</td>
+              <td><a href="https://khan.github.io/tota11y/" rel="noopener">khan.github.io/tota11y</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-labelledby="titulo-contacto-acc">
+        <h2 id="titulo-contacto-acc">Contacto sobre accesibilidad</h2>
+        <p>
+          Si encuentras alguna barrera de accesibilidad que no hayamos detectado, por
+          favor escríbenos a
+          <a href="mailto:accesibilidad@visitaronda.example">accesibilidad@visitaronda.example</a>
+          y trabajaremos para solucionarlo.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="pie" role="contentinfo">
+    <div class="pie-rejilla">
+      <div>
+        <h3>Visita Ronda</h3>
+        <p>Sitio web turístico desarrollado como Práctica 3 de la asignatura Multimedia (URJC).</p>
+      </div>
+      <nav aria-labelledby="pie-nav-titulo">
+        <h3 id="pie-nav-titulo">Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería multimedia</a></li>
+          <li><a href="postal.html">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Conformidad accesibilidad</h3>
+        <p>Sitio conforme con WCAG 2.2 nivel <strong>AA</strong>.</p>
+        <p class="pie-validadores">
+          <a href="https://www.w3.org/WAI/WCAG22/quickref/" rel="noopener">
+            <img src="img/iconos/wcag-aa.svg" alt="WCAG 2.2 nivel AA">
+          </a>
+        </p>
+      </div>
+    </div>
+    <p class="pie-copyright">© 2026 · Imágenes y textos con fines educativos · URJC</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Postal de la Plaza de Toros de Ronda">
+  <rect width="400" height="280" fill="#87CEEB"/>
+  <rect y="180" width="400" height="100" fill="#D4A24C"/>
+  <ellipse cx="200" cy="180" rx="150" ry="80" fill="#E8B964" stroke="#A0451B" stroke-width="3"/>
+  <ellipse cx="200" cy="180" rx="100" ry="55" fill="#C68B3C"/>
+  <ellipse cx="200" cy="180" rx="60" ry="35" fill="#D4A24C"/>
+  <g stroke="#FFFFFF" stroke-width="2">
+    <line x1="80" y1="160" x2="80" y2="200"/>
+    <line x1="120" y1="135" x2="120" y2="225"/>
+    <line x1="160" y1="120" x2="160" y2="240"/>
+    <line x1="200" y1="115" x2="200" y2="245"/>
+    <line x1="240" y1="120" x2="240" y2="240"/>
+    <line x1="280" y1="135" x2="280" y2="225"/>
+    <line x1="320" y1="160" x2="320" y2="200"/>
+  </g>
+  <circle cx="80" cy="60" r="15" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="100" cy="55" r="12" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="320" cy="50" r="18" fill="#FFFFFF" opacity="0.8"/>
+  <text x="200" y="40" text-anchor="middle" fill="#1E3A5F" font-family="serif" font-size="22" font-weight="bold">PLAZA DE TOROS</text>
+  <text x="200" y="65" text-anchor="middle" fill="#1E3A5F" font-family="serif" font-size="14">Ronda · 1785</text>
+</svg>

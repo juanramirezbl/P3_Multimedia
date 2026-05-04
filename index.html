@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre Ronda, la joya de la Serranía malagueña: el Puente Nuevo, la plaza de toros más antigua de España y vistas inolvidables del Tajo. Sitio web accesible WCAG 2.2 AA.">
+  <meta name="author" content="Práctica 3 - Multimedia URJC">
+  <meta name="keywords" content="Ronda, turismo, Málaga, Andalucía, Puente Nuevo, accesibilidad">
+  <title>Visita Ronda · La joya de la Serranía malagueña</title>
+
+  <!-- Tipografías accesibles desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="img/iconos/favicon.svg">
+</head>
+<body>
+
+  <!-- Saltar al contenido principal (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="cabecera" role="banner">
+    <div class="cabecera-contenido contenedor">
+      <a href="index.html" class="logo" aria-label="Visita Ronda - Inicio">
+        <svg class="logo-icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect x="4" y="20" width="40" height="24" fill="#A0451B"/>
+          <path d="M4 28 L24 12 L44 28 Z" fill="#1E3A5F"/>
+          <rect x="20" y="32" width="8" height="12" fill="#F5EFE6"/>
+          <circle cx="14" cy="24" r="2" fill="#F5EFE6"/>
+          <circle cx="34" cy="24" r="2" fill="#F5EFE6"/>
+        </svg>
+        <span>
+          <span class="logo-texto">Visita Ronda</span>
+          <span class="logo-subtexto">Andalucía · España</span>
+        </span>
+      </a>
+
+      <button class="boton-menu" aria-expanded="false" aria-controls="nav-principal" type="button">
+        ☰ Menú
+      </button>
+
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="postal.html">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html">Accesibilidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenedor">
+        <h1 id="titulo-hero">Ronda, la ciudad sobre el cielo</h1>
+        <p>
+          Encaramada sobre un acantilado de más de cien metros, Ronda es uno de los pueblos
+          más espectaculares de España. Te invitamos a recorrer su historia, su gastronomía
+          y los rincones que han enamorado a viajeros como Hemingway u Orson Welles.
+        </p>
+        <p>
+          <a href="galeria.html" class="boton">Explorar la galería</a>
+          <a href="postal.html" class="boton boton-secundario">Enviar una postal</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="contenedor">
+
+      <!-- Bienvenida -->
+      <section aria-labelledby="titulo-bienvenida">
+        <h2 id="titulo-bienvenida">Bienvenida a Ronda</h2>
+        <p>
+          Situada en la <strong>Serranía de Ronda</strong>, en la provincia de Málaga,
+          esta ciudad milenaria fue fundada por los celtas y ha sido habitada por
+          fenicios, romanos, musulmanes y cristianos. Su <strong lang="es">Tajo</strong>
+          —una espectacular garganta de 100 metros de profundidad— divide la ciudad en
+          dos: el casco antiguo (la Ciudad) y el barrio nuevo (el Mercadillo).
+        </p>
+        <p>
+          Conocida internacionalmente por su <strong>Puente Nuevo</strong> y por ser la
+          cuna del toreo moderno, Ronda ofrece una experiencia única donde la historia,
+          la naturaleza y la cultura se entrelazan.
+        </p>
+      </section>
+
+      <!-- Imprescindibles -->
+      <section aria-labelledby="titulo-imprescindibles">
+        <h2 id="titulo-imprescindibles">Lugares imprescindibles</h2>
+        <p>Estos son los rincones que no puedes perderte durante tu visita:</p>
+
+        <div class="rejilla">
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🌉</div>
+            <h3>Puente Nuevo</h3>
+            <p>
+              Construido en el siglo XVIII, este puente de 98 metros de altura es el
+              símbolo de Ronda y une el casco antiguo con la zona moderna. Sus vistas
+              al Tajo son sobrecogedoras.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🐂</div>
+            <h3>Plaza de Toros</h3>
+            <p>
+              Inaugurada en 1785, es la plaza de toros más antigua de España. Aquí nació
+              la escuela rondeña del toreo y hoy alberga un museo con valiosas piezas
+              taurinas.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🏛️</div>
+            <h3>Baños Árabes</h3>
+            <p>
+              Los baños árabes mejor conservados de la Península Ibérica, datan del siglo
+              XIII. Un ejemplo extraordinario de la arquitectura andalusí en pleno corazón
+              de la ciudad.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🌿</div>
+            <h3>Mirador de Ronda</h3>
+            <p>
+              Desde el balcón del Coño (también conocido como Mirador de Aldehuela)
+              disfrutarás de una de las panorámicas más fotografiadas de Andalucía:
+              el valle, las montañas y los olivares centenarios.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🍷</div>
+            <h3>Bodegas y vinos</h3>
+            <p>
+              La D.O. Sierras de Málaga produce algunos de los vinos más reconocidos de
+              Andalucía. Visita las bodegas de la zona y disfruta de catas guiadas con
+              maridaje rondeño.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-icono" aria-hidden="true">🥘</div>
+            <h3>Gastronomía rondeña</h3>
+            <p>
+              Prueba el rabo de toro, las migas serranas, el conejo a la rondeña o los
+              dulces de los conventos. Una cocina contundente, de sabores intensos y
+              tradición pastoril.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Datos prácticos -->
+      <section aria-labelledby="titulo-datos">
+        <h2 id="titulo-datos">Datos prácticos para tu visita</h2>
+
+        <table>
+          <caption>Información útil sobre Ronda</caption>
+          <thead>
+            <tr>
+              <th scope="col">Aspecto</th>
+              <th scope="col">Información</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ubicación</th>
+              <td>Provincia de Málaga, Andalucía (España)</td>
+            </tr>
+            <tr>
+              <th scope="row">Habitantes</th>
+              <td>Aproximadamente 33.500</td>
+            </tr>
+            <tr>
+              <th scope="row">Altitud</th>
+              <td>723 metros sobre el nivel del mar</td>
+            </tr>
+            <tr>
+              <th scope="row">Mejor época</th>
+              <td>Primavera (abril-junio) y otoño (septiembre-octubre)</td>
+            </tr>
+            <tr>
+              <th scope="row">Cómo llegar</th>
+              <td>En tren desde Algeciras o Bobadilla; en coche por la A-374 y A-397</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Cita -->
+      <section aria-labelledby="titulo-cita">
+        <h2 id="titulo-cita">Lo que dijeron de Ronda</h2>
+        <blockquote>
+          <p>
+            «Hay un sitio en España al que se puede ir como si fuera un viaje de luna de
+            miel o donde se puede ir si uno se escapa con alguien. Toda la ciudad y todo
+            cuanto la rodea es un escenario romántico. Esa ciudad es Ronda.»
+          </p>
+          <cite>Ernest Hemingway, <em>Muerte en la tarde</em> (1932)</cite>
+        </blockquote>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="pie" role="contentinfo">
+    <div class="pie-rejilla">
+      <div>
+        <h3>Visita Ronda</h3>
+        <p>Sitio web turístico desarrollado como Práctica 3 de la asignatura Multimedia (URJC).</p>
+        <p><strong>Curso:</strong> 2025/2026</p>
+      </div>
+      <nav aria-labelledby="pie-nav-titulo">
+        <h3 id="pie-nav-titulo">Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería multimedia</a></li>
+          <li><a href="postal.html">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Conformidad accesibilidad</h3>
+        <p>Este sitio cumple con las pautas <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 nivel <strong>AA</strong>.</p>
+        <p class="pie-validadores">
+          <a href="https://www.w3.org/WAI/WCAG22/quickref/" rel="noopener">
+            <img src="img/iconos/wcag-aa.svg" alt="WCAG 2.2 nivel AA - Conformidad de accesibilidad">
+          </a>
+          <a href="https://validator.w3.org/" rel="noopener">
+            <img src="img/iconos/html5-valido.svg" alt="HTML5 válido">
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/" rel="noopener">
+            <img src="img/iconos/css-valido.svg" alt="CSS válido">
+          </a>
+        </p>
+      </div>
+    </div>
+    <p class="pie-copyright">
+      © 2026 · Imágenes y textos con fines educativos · Universidad Rey Juan Carlos
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

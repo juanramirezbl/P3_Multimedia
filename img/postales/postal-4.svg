@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Postal del casco antiguo de Ronda">
+  <rect width="400" height="280" fill="#87B7D8"/>
+  <rect y="180" width="400" height="100" fill="#8B7355"/>
+  <rect x="20" y="80" width="80" height="120" fill="#F5EFE6" stroke="#3D2817" stroke-width="1"/>
+  <polygon points="20,80 60,50 100,80" fill="#A0451B"/>
+  <rect x="40" y="110" width="15" height="25" fill="#1E3A5F"/>
+  <rect x="65" y="110" width="15" height="25" fill="#1E3A5F"/>
+  <rect x="50" y="150" width="20" height="40" fill="#5A3A20"/>
+  <rect x="120" y="100" width="80" height="100" fill="#FAF3E7" stroke="#3D2817" stroke-width="1"/>
+  <polygon points="120,100 160,70 200,100" fill="#A0451B"/>
+  <rect x="135" y="120" width="15" height="20" fill="#1E3A5F"/>
+  <rect x="170" y="120" width="15" height="20" fill="#1E3A5F"/>
+  <rect x="135" y="150" width="15" height="20" fill="#1E3A5F"/>
+  <rect x="170" y="150" width="15" height="20" fill="#1E3A5F"/>
+  <rect x="220" y="90" width="100" height="110" fill="#F0E8D8" stroke="#3D2817" stroke-width="1"/>
+  <polygon points="220,90 270,60 320,90" fill="#A0451B"/>
+  <rect x="235" y="110" width="20" height="30" fill="#1E3A5F"/>
+  <rect x="265" y="110" width="20" height="30" fill="#1E3A5F"/>
+  <rect x="295" y="110" width="15" height="30" fill="#1E3A5F"/>
+  <rect x="245" y="150" width="30" height="50" fill="#5A3A20"/>
+  <rect x="340" y="120" width="50" height="80" fill="#F5EFE6" stroke="#3D2817" stroke-width="1"/>
+  <polygon points="340,120 365,100 390,120" fill="#A0451B"/>
+  <ellipse cx="100" cy="175" rx="15" ry="10" fill="#A0451B"/>
+  <ellipse cx="200" cy="180" rx="12" ry="8" fill="#D4574F"/>
+  <ellipse cx="300" cy="178" rx="10" ry="7" fill="#A0451B"/>
+  <text x="200" y="40" text-anchor="middle" fill="#1E3A5F" font-family="serif" font-size="22" font-weight="bold">CASCO ANTIGUO</text>
+  <text x="200" y="265" text-anchor="middle" fill="#FFFFFF" font-family="serif" font-size="14" font-weight="bold">Ronda</text>
+</svg>

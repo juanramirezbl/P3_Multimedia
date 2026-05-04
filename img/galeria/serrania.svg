@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Ilustración del paisaje de la Serranía de Ronda al amanecer">
+  <defs>
+    <linearGradient id="serr-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB37A"/>
+      <stop offset="50%" stop-color="#FFD7B5"/>
+      <stop offset="100%" stop-color="#F5EFE6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#serr-cielo)"/>
+  <circle cx="500" cy="100" r="35" fill="#FFE4A0"/>
+  <circle cx="500" cy="100" r="50" fill="#FFE4A0" opacity="0.3"/>
+  <path d="M 0 200 L 100 130 L 200 160 L 300 110 L 400 140 L 500 120 L 600 150 L 600 250 L 0 250 Z" fill="#7A8B6F" opacity="0.5"/>
+  <path d="M 0 230 L 150 180 L 250 200 L 350 170 L 450 190 L 550 175 L 600 200 L 600 280 L 0 280 Z" fill="#5C6B4F" opacity="0.7"/>
+  <path d="M 0 260 L 600 260 L 600 320 L 0 320 Z" fill="#3D5238"/>
+  <path d="M 0 320 L 600 320 L 600 400 L 0 400 Z" fill="#2A3D26"/>
+  <g fill="#5A3A20">
+    <ellipse cx="50" cy="350" rx="22" ry="28"/>
+    <rect x="46" y="360" width="8" height="30"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="120" cy="355" rx="25" ry="32"/>
+    <rect x="115" y="365" width="10" height="30"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="200" cy="360" rx="20" ry="25"/>
+    <rect x="196" y="370" width="8" height="25"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="280" cy="365" rx="28" ry="35"/>
+    <rect x="274" y="375" width="12" height="25"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="380" cy="360" rx="22" ry="28"/>
+    <rect x="376" y="370" width="8" height="30"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="460" cy="365" rx="25" ry="32"/>
+    <rect x="455" y="375" width="10" height="25"/>
+  </g>
+  <g fill="#5A3A20">
+    <ellipse cx="540" cy="360" rx="20" ry="26"/>
+    <rect x="536" y="370" width="8" height="30"/>
+  </g>
+</svg>

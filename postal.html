@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Envía una postal virtual de Ronda. Formulario accesible WCAG 2.2 AA con cinco diseños distintos para elegir.">
+  <title>Enviar una postal · Visita Ronda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="img/iconos/favicon.svg">
+</head>
+<body>
+
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="cabecera" role="banner">
+    <div class="cabecera-contenido contenedor">
+      <a href="index.html" class="logo" aria-label="Visita Ronda - Inicio">
+        <svg class="logo-icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect x="4" y="20" width="40" height="24" fill="#A0451B"/>
+          <path d="M4 28 L24 12 L44 28 Z" fill="#1E3A5F"/>
+          <rect x="20" y="32" width="8" height="12" fill="#F5EFE6"/>
+          <circle cx="14" cy="24" r="2" fill="#F5EFE6"/>
+          <circle cx="34" cy="24" r="2" fill="#F5EFE6"/>
+        </svg>
+        <span>
+          <span class="logo-texto">Visita Ronda</span>
+          <span class="logo-subtexto">Andalucía · España</span>
+        </span>
+      </a>
+      <button class="boton-menu" aria-expanded="false" aria-controls="nav-principal" type="button">☰ Menú</button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="postal.html" aria-current="page">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html">Accesibilidad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <div class="contenedor">
+
+      <h1>Envía una postal de Ronda</h1>
+      <p>
+        Comparte el encanto de Ronda con un ser querido. Elige una de las cinco postales
+        diseñadas, escribe un mensaje personal y envíala.
+      </p>
+      <p>
+        <small>
+          Los campos obligatorios están marcados con un asterisco
+          (<span class="obligatorio" aria-hidden="true">*</span>).
+          Esta es una <strong>simulación</strong> con fines académicos: no se enviará ningún correo real.
+        </small>
+      </p>
+
+      <form id="formulario-postal" class="formulario-postal" novalidate>
+
+        <!-- Mensaje global de error/éxito -->
+        <div id="mensaje-global" class="mensaje-global" hidden></div>
+
+        <fieldset id="seleccion-postal" aria-describedby="ayuda-postal error-postal">
+          <legend>1. Elige tu postal <span class="obligatorio" aria-label="obligatorio">*</span></legend>
+          <p id="ayuda-postal" class="ayuda">
+            Selecciona una de las cinco postales disponibles haciendo clic sobre la imagen
+            o usando las flechas del teclado.
+          </p>
+
+          <ul class="opciones-postales" role="radiogroup" aria-labelledby="seleccion-postal">
+            <li class="opcion-postal">
+              <input type="radio" id="postal-1" name="postal" value="Puente Nuevo al atardecer" required>
+              <label for="postal-1">
+                <img src="img/postales/postal-1.svg" alt="Postal con el Puente Nuevo iluminado al atardecer">
+                <span class="opcion-postal-titulo">Puente Nuevo al atardecer</span>
+              </label>
+            </li>
+
+            <li class="opcion-postal">
+              <input type="radio" id="postal-2" name="postal" value="Plaza de Toros">
+              <label for="postal-2">
+                <img src="img/postales/postal-2.svg" alt="Postal con vista cenital de la Plaza de Toros de Ronda">
+                <span class="opcion-postal-titulo">Plaza de Toros</span>
+              </label>
+            </li>
+
+            <li class="opcion-postal">
+              <input type="radio" id="postal-3" name="postal" value="Vistas del Tajo">
+              <label for="postal-3">
+                <img src="img/postales/postal-3.svg" alt="Postal con la garganta del Tajo y el valle al fondo">
+                <span class="opcion-postal-titulo">Vistas del Tajo</span>
+              </label>
+            </li>
+
+            <li class="opcion-postal">
+              <input type="radio" id="postal-4" name="postal" value="Casco antiguo">
+              <label for="postal-4">
+                <img src="img/postales/postal-4.svg" alt="Postal con calles empedradas y casas blancas del casco antiguo">
+                <span class="opcion-postal-titulo">Casco antiguo</span>
+              </label>
+            </li>
+
+            <li class="opcion-postal">
+              <input type="radio" id="postal-5" name="postal" value="Serranía al amanecer">
+              <label for="postal-5">
+                <img src="img/postales/postal-5.svg" alt="Postal con olivares y montañas de la Serranía de Ronda al amanecer">
+                <span class="opcion-postal-titulo">Serranía al amanecer</span>
+              </label>
+            </li>
+          </ul>
+
+          <span id="error-postal" class="mensaje-error" role="alert" aria-live="polite"></span>
+        </fieldset>
+
+        <!-- ==================== Datos del remitente ==================== -->
+        <fieldset>
+          <legend>2. Tus datos (remitente)</legend>
+
+          <div class="campo">
+            <label for="remitente">
+              Tu nombre <span class="obligatorio" aria-label="obligatorio">*</span>
+            </label>
+            <span id="ayuda-remitente" class="ayuda">Aparecerá como remitente de la postal.</span>
+            <input type="text"
+                   id="remitente"
+                   name="remitente"
+                   required
+                   minlength="2"
+                   autocomplete="given-name"
+                   aria-required="true"
+                   aria-describedby="ayuda-remitente error-remitente">
+            <span id="error-remitente" class="mensaje-error" aria-live="polite"></span>
+          </div>
+        </fieldset>
+
+        <!-- ==================== Datos del destinatario ==================== -->
+        <fieldset>
+          <legend>3. Datos de quien recibirá la postal</legend>
+
+          <div class="campo">
+            <label for="destinatario-nombre">
+              Nombre del destinatario <span class="obligatorio" aria-label="obligatorio">*</span>
+            </label>
+            <input type="text"
+                   id="destinatario-nombre"
+                   name="destinatario-nombre"
+                   required
+                   minlength="2"
+                   autocomplete="name"
+                   aria-required="true"
+                   aria-describedby="error-destinatario-nombre">
+            <span id="error-destinatario-nombre" class="mensaje-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="destinatario-email">
+              Correo electrónico del destinatario <span class="obligatorio" aria-label="obligatorio">*</span>
+            </label>
+            <span id="ayuda-email" class="ayuda">
+              Por ejemplo: nombre@dominio.com. No se compartirá con terceros.
+            </span>
+            <input type="email"
+                   id="destinatario-email"
+                   name="destinatario-email"
+                   required
+                   autocomplete="email"
+                   aria-required="true"
+                   aria-describedby="ayuda-email error-destinatario-email">
+            <span id="error-destinatario-email" class="mensaje-error" aria-live="polite"></span>
+          </div>
+        </fieldset>
+
+        <!-- ==================== Mensaje ==================== -->
+        <fieldset>
+          <legend>4. Tu mensaje</legend>
+
+          <div class="campo">
+            <label for="mensaje">
+              Mensaje personal <span class="obligatorio" aria-label="obligatorio">*</span>
+            </label>
+            <span id="ayuda-mensaje" class="ayuda">
+              Escribe un mensaje breve (mínimo 10 caracteres, máximo 500).
+            </span>
+            <textarea id="mensaje"
+                      name="mensaje"
+                      required
+                      minlength="10"
+                      maxlength="500"
+                      rows="5"
+                      aria-required="true"
+                      aria-describedby="ayuda-mensaje error-mensaje"></textarea>
+            <span id="error-mensaje" class="mensaje-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="idioma">Idioma de la postal</label>
+            <select id="idioma" name="idioma" autocomplete="language">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- ==================== Botones ==================== -->
+        <div class="campo" style="text-align:center;">
+          <button type="submit" class="boton">Enviar postal</button>
+          <button type="reset" class="boton boton-secundario" style="background:transparent; color:var(--color-azul); border-color:var(--color-azul);">
+            Borrar formulario
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="pie" role="contentinfo">
+    <div class="pie-rejilla">
+      <div>
+        <h3>Visita Ronda</h3>
+        <p>Sitio web turístico desarrollado como Práctica 3 de la asignatura Multimedia (URJC).</p>
+      </div>
+      <nav aria-labelledby="pie-nav-titulo">
+        <h3 id="pie-nav-titulo">Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería multimedia</a></li>
+          <li><a href="postal.html">Enviar postal</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Conformidad accesibilidad</h3>
+        <p>Sitio conforme con WCAG 2.2 nivel <strong>AA</strong>.</p>
+        <p class="pie-validadores">
+          <a href="https://www.w3.org/WAI/WCAG22/quickref/" rel="noopener">
+            <img src="img/iconos/wcag-aa.svg" alt="WCAG 2.2 nivel AA">
+          </a>
+        </p>
+      </div>
+    </div>
+    <p class="pie-copyright">© 2026 · Imágenes y textos con fines educativos · URJC</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

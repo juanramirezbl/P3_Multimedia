@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Ilustración del Puente Nuevo de Ronda">
+  <defs>
+    <linearGradient id="pn-cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5DA9DD"/>
+      <stop offset="100%" stop-color="#A8D5E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#pn-cielo)"/>
+  <path d="M 0 250 L 200 240 L 220 100 L 380 100 L 400 240 L 600 250 L 600 400 L 0 400 Z" fill="#7A8B6F"/>
+  <path d="M 0 280 L 600 280 L 600 400 L 0 400 Z" fill="#5C6B4F"/>
+  <rect x="180" y="180" width="240" height="80" fill="#A0451B"/>
+  <path d="M 200 180 Q 240 130 280 180" fill="none" stroke="#3D2817" stroke-width="3"/>
+  <path d="M 320 180 Q 360 130 400 180" fill="none" stroke="#3D2817" stroke-width="3"/>
+  <rect x="160" y="100" width="40" height="160" fill="#8B6914"/>
+  <rect x="400" y="100" width="40" height="160" fill="#8B6914"/>
+  <g fill="#F5EFE6">
+    <rect x="190" y="50" width="25" height="50"/>
+    <rect x="220" y="40" width="25" height="60"/>
+    <rect x="250" y="50" width="25" height="50"/>
+    <rect x="280" y="35" width="30" height="65"/>
+    <rect x="315" y="45" width="25" height="55"/>
+    <rect x="345" y="40" width="30" height="60"/>
+    <rect x="380" y="50" width="25" height="50"/>
+  </g>
+  <g fill="#A0451B">
+    <polygon points="190,50 215,30 215,50"/>
+    <polygon points="220,40 245,20 245,40"/>
+    <polygon points="280,35 310,15 310,35"/>
+    <polygon points="345,40 375,20 375,40"/>
+  </g>
+  <g fill="#1E3A5F" opacity="0.6">
+    <rect x="195" y="65" width="6" height="10"/>
+    <rect x="225" y="55" width="6" height="10"/>
+    <rect x="285" y="50" width="6" height="10"/>
+    <rect x="350" y="55" width="6" height="10"/>
+  </g>
+</svg>
