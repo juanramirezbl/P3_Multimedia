@@ -300,8 +300,17 @@ main {
   text-decoration: underline;
 }
 
+.boton:visited {
+  color: var(--color-blanco);
+}
+
 .boton-secundario {
   background-color: transparent;
+  color: var(--color-blanco);
+  border-color: var(--color-blanco);
+}
+
+.boton-secundario:visited {
   color: var(--color-blanco);
   border-color: var(--color-blanco);
 }
