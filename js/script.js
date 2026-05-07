@@ -157,7 +157,6 @@
 
     const datos = new FormData(formulario);
 
-    // --- CÓDIGO ACTUALIZADO: URLs ABSOLUTAS Y CORRECCIÓN DE TILDE ---
     const baseUrl = 'https://juanramirezbl.github.io/P3_Multimedia/img/postales/';
 
     const imagenesPostales = {
@@ -170,7 +169,6 @@
 
     const postalSeleccionada = datos.get('postal');
     const urlImagen = imagenesPostales[postalSeleccionada] || '';
-    // ----------------------------------------------------------------
 
     const parametros = {
       from_name:  datos.get('remitente'),
