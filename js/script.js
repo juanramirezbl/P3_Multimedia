@@ -1,11 +1,4 @@
-/* =====================================================================
-   VISITA RONDA · JavaScript
-   Funcionalidades accesibles:
-   - Menú móvil con aria-expanded
-   - Validación accesible del formulario (foco al error, role=alert)
-   - Envío real de la postal vía EmailJS
-   - Cumplimiento RGPD (consentimiento obligatorio)
-   ===================================================================== */
+
 
 (function() {
   'use strict';
@@ -164,24 +157,20 @@
 
     const datos = new FormData(formulario);
 
+    // --- CÓDIGO ACTUALIZADO: URLs ABSOLUTAS Y CORRECCIÓN DE TILDE ---
+    const baseUrl = 'https://juanramirezbl.github.io/P3_Multimedia/img/postales/';
+
     const imagenesPostales = {
-      'Puente Nuevo al atardecer': 'img/postales/postal-1.jpeg',
-      'Plaza de Toros':            'img/postales/postal-2.jpeg',
-      'Vistas del Tajo':            'img/postales/postal-3.jpeg',
-      'Casco antiguo':              'img/postales/postal-4.jpeg',
-      'Serrania al amanecer':       'img/postales/postal-5.jpeg'
+      'Puente Nuevo al atardecer': baseUrl + 'postal-1.jpeg',
+      'Plaza de Toros':            baseUrl + 'postal-2.jpeg',
+      'Vistas del Tajo':           baseUrl + 'postal-3.jpeg',
+      'Casco antiguo':             baseUrl + 'postal-4.jpeg',
+      'Serranía al amanecer':      baseUrl + 'postal-5.jpeg'
     };
 
     const postalSeleccionada = datos.get('postal');
-    const rutaImagen = imagenesPostales[postalSeleccionada] || '';
-
-    const urlImagen = rutaImagen
-        ? new URL(rutaImagen, window.location.href).href
-        : '';
-
-
-
-
+    const urlImagen = imagenesPostales[postalSeleccionada] || '';
+    // ----------------------------------------------------------------
 
     const parametros = {
       from_name:  datos.get('remitente'),
