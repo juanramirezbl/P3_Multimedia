@@ -1,29 +1,34 @@
 
 :root {
-  --color-fondo: #F5EFE6;
-  --color-fondo-alt: #EAE0CC;
-  --color-texto: #2C2416;
-  --color-texto-suave: #4A3F30;
-  --color-acento: #A0451B;
-  --color-acento-oscuro: #7A3414;
-  --color-azul: #1E3A5F;
+  /* Paleta de colores (todos cumplen contraste AA mínimo 4.5:1) */
+  --color-fondo: #F5EFE6;          /* Crema (paredes encaladas) */
+  --color-fondo-alt: #EAE0CC;      /* Crema más oscuro */
+  --color-texto: #2C2416;          /* Carbón cálido */
+  --color-texto-suave: #4A3F30;    /* Texto secundario */
+  --color-acento: #A0451B;         /* Terracota (tejados) */
+  --color-acento-oscuro: #7A3414;  /* Hover del acento */
+  --color-azul: #1E3A5F;           /* Azul cielo profundo */
   --color-blanco: #FFFFFF;
   --color-error: #B91C1C;
   --color-error-fondo: #FEE2E2;
   --color-exito: #15603D;
   --color-exito-fondo: #DCFCE7;
-  --color-foco: #0066CC;
+  --color-foco: #0066CC;           /* Azul foco muy visible */
 
+  /* Tipografía */
   --fuente-titulos: 'Fraunces', Georgia, serif;
   --fuente-texto: 'Atkinson Hyperlegible', 'Segoe UI', Arial, sans-serif;
 
+  /* Tamaños base (relativos para que el zoom funcione) */
   --base: 1rem;
   --radio: 4px;
 
+  /* Sombras */
   --sombra-suave: 0 2px 8px rgba(44, 36, 22, 0.08);
   --sombra-media: 0 4px 16px rgba(44, 36, 22, 0.12);
 }
 
+/* ---------- Reset básico accesible ---------- */
 *,
 *::before,
 *::after {
@@ -76,6 +81,7 @@ body {
   outline-offset: 2px;
 }
 
+/* ---------- Foco visible (WCAG 2.4.7 y 2.4.11) ---------- */
 :focus {
   outline: 3px solid var(--color-foco);
   outline-offset: 2px;
@@ -90,6 +96,7 @@ body {
   outline-offset: 2px;
 }
 
+/* ---------- Tipografía ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
   color: var(--color-azul);
@@ -137,6 +144,7 @@ a:visited {
   color: #6B2D85;
 }
 
+/* ---------- Layout principal ---------- */
 .contenedor {
   width: 100%;
   max-width: 1200px;
@@ -149,6 +157,7 @@ main {
   min-height: 60vh;
 }
 
+/* ---------- Cabecera y navegación ---------- */
 .cabecera {
   background-color: var(--color-blanco);
   border-bottom: 4px solid var(--color-acento);
@@ -201,6 +210,7 @@ main {
   text-transform: uppercase;
 }
 
+/* Botón hamburguesa para móvil */
 .boton-menu {
   display: none;
   background: var(--color-azul);
@@ -210,6 +220,7 @@ main {
   font-size: 1rem;
   cursor: pointer;
   border-radius: var(--radio);
+  /* Tamaño táctil mínimo 44px (WCAG 2.5.8) */
   min-width: 44px;
   min-height: 44px;
 }
@@ -218,6 +229,7 @@ main {
   background: var(--color-acento);
 }
 
+/* Navegación */
 .nav-principal ul {
   display: flex;
   flex-wrap: wrap;
@@ -234,6 +246,7 @@ main {
   color: var(--color-texto);
   border-radius: var(--radio);
   font-weight: 600;
+  /* Mínimo 44x44px para targets táctiles (WCAG 2.5.8) */
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -245,12 +258,14 @@ main {
   text-decoration: underline;
 }
 
+/* Página actual marcada con aria-current */
 .nav-principal a[aria-current="page"] {
   background-color: var(--color-azul);
   color: var(--color-blanco);
   text-decoration: underline;
 }
 
+/* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(135deg, var(--color-azul) 0%, #2A4A6F 100%);
   color: var(--color-blanco);
@@ -276,6 +291,7 @@ main {
   box-shadow: var(--sombra-media);
 }
 
+/* ---------- Botones ---------- */
 .boton {
   display: inline-block;
   padding: 0.875rem 1.5rem;
@@ -289,6 +305,7 @@ main {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
+  /* Tamaño mínimo táctil 44px (WCAG 2.5.8) */
   min-height: 44px;
   min-width: 44px;
 }
@@ -300,17 +317,8 @@ main {
   text-decoration: underline;
 }
 
-.boton:visited {
-  color: var(--color-blanco);
-}
-
 .boton-secundario {
   background-color: transparent;
-  color: var(--color-blanco);
-  border-color: var(--color-blanco);
-}
-
-.boton-secundario:visited {
   color: var(--color-blanco);
   border-color: var(--color-blanco);
 }
@@ -320,6 +328,7 @@ main {
   color: var(--color-azul);
 }
 
+/* ---------- Tarjetas y rejilla ---------- */
 .rejilla {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -343,8 +352,10 @@ main {
 .tarjeta-icono {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  /* Aviso: si se usa un emoji decorativo, se marca aria-hidden en HTML */
 }
 
+/* ---------- Galería ---------- */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -382,6 +393,7 @@ main {
   font-size: 1.05rem;
 }
 
+/* ---------- Multimedia ---------- */
 .multimedia-bloque {
   background-color: var(--color-blanco);
   padding: 1.5rem;
@@ -401,6 +413,7 @@ main {
   border-radius: var(--radio);
 }
 
+/* Transcripción colapsable */
 details.transcripcion {
   margin-top: 1rem;
   border: 2px solid var(--color-fondo-alt);
@@ -413,6 +426,7 @@ details.transcripcion summary {
   font-weight: 700;
   color: var(--color-azul);
   padding: 0.5rem;
+  /* Mínimo 44px táctil */
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -427,6 +441,7 @@ details.transcripcion[open] summary {
   margin-bottom: 1rem;
 }
 
+/* ---------- Formulario ---------- */
 form.formulario-postal {
   background-color: var(--color-blanco);
   padding: 2rem;
@@ -486,6 +501,7 @@ legend {
   border-radius: var(--radio);
   background-color: var(--color-blanco);
   color: var(--color-texto);
+  /* Mínimo 44px alto táctil */
   min-height: 44px;
 }
 
@@ -502,6 +518,7 @@ legend {
   outline-offset: 0;
 }
 
+/* Estado de error */
 .campo input[aria-invalid="true"],
 .campo textarea[aria-invalid="true"],
 .campo select[aria-invalid="true"] {
@@ -525,6 +542,7 @@ legend {
   display: none;
 }
 
+/* Selección de postal con radios visuales */
 .opciones-postales {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -539,6 +557,7 @@ legend {
 }
 
 .opcion-postal input[type="radio"] {
+  /* Ocultamos visualmente pero mantenemos accesible */
   position: absolute;
   opacity: 0;
   width: 1px;
@@ -555,6 +574,7 @@ legend {
   background-color: var(--color-fondo);
   transition: border-color 0.2s, transform 0.1s;
   text-align: center;
+  /* Mínimo 44px táctil */
   min-height: 44px;
 }
 
@@ -570,6 +590,7 @@ legend {
 .opcion-postal input[type="radio"]:checked + label {
   border-color: var(--color-acento);
   background-color: var(--color-fondo-alt);
+  /* Indicador adicional al color (WCAG 1.4.1 - no solo color) */
   box-shadow: 0 0 0 3px var(--color-acento);
 }
 
@@ -594,6 +615,7 @@ legend {
   color: var(--color-texto);
 }
 
+/* Mensajes globales del formulario */
 .mensaje-global {
   padding: 1rem 1.25rem;
   border-radius: var(--radio);
@@ -618,6 +640,91 @@ legend {
   padding: 0;
 }
 
+/* Aviso RGPD */
+.aviso-rgpd {
+  background-color: #FAF6EE;
+  border: 1px solid #D7CDB8;
+  border-radius: var(--radio);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.aviso-rgpd p {
+  margin: 0 0 0.5rem 0;
+}
+
+.aviso-rgpd ul {
+  margin: 0.25rem 0 0 1.25rem;
+  padding: 0;
+}
+
+.aviso-rgpd li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+/* Campo casilla de verificación accesible (RGPD) */
+.campo-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-fondo-alt);
+  border-radius: var(--radio);
+  border: 2px solid transparent;
+}
+
+.campo-checkbox input[type="checkbox"] {
+  /* Tamaño táctil mínimo WCAG 2.2 (2.5.8) */
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--color-acento);
+}
+
+.campo-checkbox input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 3px;
+}
+
+.campo-checkbox input[type="checkbox"][aria-invalid="true"] + label {
+  color: var(--color-error);
+}
+
+.campo-checkbox label {
+  flex: 1;
+  min-width: 200px;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.campo-checkbox .mensaje-error {
+  flex-basis: 100%;
+}
+
+/* Contenido de texto largo (políticas, declaraciones) */
+.contenido-texto {
+  max-width: 70ch;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contenido-texto h2 {
+  margin-top: 2.5rem;
+}
+
+.contenido-texto p,
+.contenido-texto li {
+  line-height: 1.7;
+}
+
+/* ---------- Pie de página ---------- */
 .pie {
   background-color: var(--color-azul);
   color: var(--color-blanco);
@@ -626,7 +733,7 @@ legend {
 }
 
 .pie a {
-  color: #FFD7B5;
+  color: #FFD7B5; /* Naranja claro contraste alto sobre azul oscuro */
 }
 
 .pie a:hover {
@@ -681,6 +788,7 @@ legend {
   font-size: 0.9rem;
 }
 
+/* ---------- Listas accesibles ---------- */
 .lista-iconos {
   list-style: none;
   padding: 0;
@@ -698,9 +806,10 @@ legend {
   left: 0;
   color: var(--color-acento);
   font-weight: bold;
+  /* Decorativo: las imágenes/iconos puramente decorativos no necesitan alt */
 }
 
-
+/* ---------- Tablas accesibles ---------- */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -733,11 +842,13 @@ tbody tr:nth-child(even) {
   background-color: var(--color-fondo);
 }
 
+/* ---------- Imágenes responsivas ---------- */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* ---------- Citas ---------- */
 blockquote {
   border-left: 4px solid var(--color-acento);
   padding: 1rem 1.5rem;
@@ -790,6 +901,7 @@ blockquote cite {
   }
 }
 
+/* ---------- Modo alto contraste ---------- */
 @media (prefers-contrast: more) {
   :root {
     --color-fondo: #FFFFFF;
@@ -799,6 +911,7 @@ blockquote cite {
   }
 }
 
+/* ---------- Modo impresión ---------- */
 @media print {
   .skip-link, .cabecera, .pie, .boton-menu, .boton {
     display: none;
@@ -816,6 +929,7 @@ blockquote cite {
   }
 }
 
+/* ---------- Visualmente oculto pero accesible para lectores ---------- */
 .sr-only {
   position: absolute;
   width: 1px;
